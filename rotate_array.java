@@ -2,19 +2,20 @@ package Dsa_Questions;
 
 public class rotate_array {
     public void rotate(int[] nums, int k) {
+        k = k % nums.length;
         rotatearr(nums,0,nums.length-1);
         rotatearr(nums,0,k-1);
         rotatearr(nums,k, nums.length-1);
         display(nums);
 
     }
-    public void rotatearr(int [] arr,int start,int end){
-        int k=0;
-        for (int i = start; i <=start+((end-start)/2); i++) {
-            int temp=arr[i];
-            arr[i]=arr[end-k];
-            arr[end-k]=temp;
-            k++;
+    public void rotatearr(int[] arr, int start, int end) {
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
         }
     }
     public void display(int[]arr){
@@ -25,6 +26,6 @@ public class rotate_array {
     public static void main(String[] args) {
         int [] arr={-1,-100,3,99};
         rotate_array r=new rotate_array();
-        r.rotate(arr,4);
+        r.rotate(arr,3);
     }
 }
