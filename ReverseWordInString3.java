@@ -1,8 +1,7 @@
 package Dsa_Questions;
+//https://leetcode.com/problems/reverse-words-in-a-string-iii/?envType=problem-list-v2&envId=string
 
-import java.util.Arrays;
-
-public class ReverseWordInString2 {
+public class ReverseWordInString3 {
     public String reverseWords(String s) {
         char[] c=s.toCharArray();
         int start=0;
@@ -26,7 +25,7 @@ public class ReverseWordInString2 {
     }
 
     public static void main(String[] args) {
-        ReverseWordInString2 obj=new ReverseWordInString2();
+        ReverseWordInString3 obj=new ReverseWordInString3();
         System.out.println(obj.reverseWords("My name is Anurag singh"));
     }
 }
