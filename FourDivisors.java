@@ -3,7 +3,7 @@ package Dsa_Questions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FourDIvisors {
+public class FourDivisors {
     public int sumFourDivisors(int[] nums) {
         int sumFour=0;
         for (int i = 0; i < nums.length; i++) {
